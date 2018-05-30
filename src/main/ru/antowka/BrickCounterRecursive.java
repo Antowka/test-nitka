@@ -2,10 +2,6 @@ package ru.antowka;
 
 public class BrickCounterRecursive implements BrickCounter {
 
-    private static final double BRICK_WEIGHT = 1d;
-    private int finished = 0;
-
-
     @Override
     public double weight(int row, int pos) {
 
@@ -20,10 +16,8 @@ public class BrickCounterRecursive implements BrickCounter {
 
     private double getWeightWithPrevLevel(int row, int pos, double result, double step) {
 
-        if (row == 0) {
-            finished++;
-            return result; //exit
-        }
+        if (row == 0) return result; //exit
+
 
 
         if (isFirstOrLastBrickInRow(row, pos)) {

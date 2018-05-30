@@ -5,7 +5,6 @@ public class BrickCounterSimple implements BrickCounter {
     private static final double BRICK_WEIGHT = 1d;
 
     public static void main(String[] args) {
-        System.out.println(new BrickCounterSimple().weight(322, 156));
     }
 
 
